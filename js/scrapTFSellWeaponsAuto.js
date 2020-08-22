@@ -95,5 +95,5 @@ function scrapTFSellWeaponsAuto(number_of_weapons_to_retain, filter_by_name, all
     }
     /* eslint-enable */
 
-    if (do_auto_trade && item_value.Weapons > 0) document.querySelector(".btn-tradenow").trigger("click");
+    if (do_auto_trade && item_value.Weapons > 0) document.querySelector(".btn-tradenow").click();
 }
