@@ -1,6 +1,6 @@
 # [Scrap.tf][scrap-tf] Scripts
 
-## scrapTFSellWeaponsAuto
+## [scrapTFSellWeaponsAuto][scraptfsellweaponsauto-raw]
 
 ### Description
 
@@ -44,3 +44,4 @@ Trade Contents
 ```
 
 [scrap-tf]: https://scrap.tf
+[scraptfsellweaponsauto-raw]: https://raw.githubusercontent.com/lukesrw/scrap-tf/master/js/scrapTFSellWeaponsAuto.js
