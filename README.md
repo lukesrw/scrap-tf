@@ -1,5 +1,9 @@
 # [Scrap.tf][scrap-tf] Scripts
 
+## [All Scripts][scraptfscripts-all-raw]
+
+---
+
 ## [scrapTFSellWeaponsAuto][scraptfsellweaponsauto-raw]
 
 ### Description
@@ -62,5 +66,6 @@ The function is called "scrapTFSellWeaponsSort" and takes 0 arguments, just call
 No output.
 
 [scrap-tf]: https://scrap.tf
+[scraptfscripts-all-raw]: https://raw.githubusercontent.com/lukesrw/scrap-tf/master/js/scripts.js
 [scraptfsellweaponsauto-raw]: https://raw.githubusercontent.com/lukesrw/scrap-tf/master/js/scrapTFSellWeaponsAuto.js
 [scraptfsellweaponssort-raw]: https://raw.githubusercontent.com/lukesrw/scrap-tf/master/js/scrapTFSellWeaponsSort.js
