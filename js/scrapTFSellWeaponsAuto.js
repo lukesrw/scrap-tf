@@ -31,19 +31,22 @@ function scrapTFSellWeaponsAuto(number_of_weapons_to_retain, filter_by_name, all
 
     document.getElementById("ClearSelectedReverse").click();
     Array.prototype.forEach.call(document.querySelectorAll("#user-bp-440 .item"), function (item) {
-        if (!Object.prototype.hasOwnProperty.call(item_counts, item.dataset.title)) {
-            item_counts[item.dataset.title] = [];
+        if (!Object.prototype.hasOwnProperty.call(item_counts, item.dataset.defindex)) {
+            item_counts[item.dataset.defindex] = [];
         }
-        item_counts[item.dataset.title].push(item);
+        item_counts[item.dataset.defindex].push(item);
     });
 
-    Object.keys(item_counts).forEach(function (name) {
+    Object.keys(item_counts).forEach(function (id) {
         items_removed = 0;
-        if (item_counts[name].length >= number_of_weapons_to_retain + 1) {
+        if (item_counts[id].length >= number_of_weapons_to_retain + 1) {
             // remove anything with given name
             if (filter_by_name) {
-                item_counts[name] = item_counts[name].filter(function (item) {
-                    if (item.dataset.content.indexOf(filter_by_name) > -1) {
+                item_counts[id] = item_counts[id].filter(function (item) {
+                    if (
+                        item.dataset.content.indexOf(filter_by_name) > -1 ||
+                        (item.dataset.title.substr(0, 1) === "&" && item.dataset.title.substr(-1) === ";")
+                    ) {
                         items_removed += 1;
 
                         return false;
@@ -53,14 +56,14 @@ function scrapTFSellWeaponsAuto(number_of_weapons_to_retain, filter_by_name, all
                 });
             }
 
-            item_counts[name].slice(number_of_weapons_to_retain - items_removed).forEach(function (item) {
+            item_counts[id].slice(number_of_weapons_to_retain - items_removed).forEach(function (item) {
                 item.click();
             });
-            item_counts[name] = document.querySelectorAll('.selected-item[data-title="' + name + '"]').length;
-            item_value.Weapons += item_counts[name];
-            if (item_counts[name] === 0) delete item_counts[name];
+            item_counts[id] = document.querySelectorAll('.selected-item[data-defindex="' + id + '"]').length;
+            item_value.Weapons += item_counts[id];
+            if (item_counts[id] === 0) delete item_counts[id];
         } else {
-            delete item_counts[name];
+            delete item_counts[id];
         }
     });
 
@@ -70,10 +73,16 @@ function scrapTFSellWeaponsAuto(number_of_weapons_to_retain, filter_by_name, all
         allow_half_scrap.click();
 
         item_value.Weapons -= 1;
-        item_counts[allow_half_scrap.dataset.title] -= 1;
+        item_counts[allow_half_scrap.dataset.defindex] -= 1;
 
-        if (item_counts[allow_half_scrap.dataset.title] === 0) delete item_counts[allow_half_scrap.dataset.title];
+        if (item_counts[allow_half_scrap.dataset.defindex] === 0) delete item_counts[allow_half_scrap.dataset.defindex];
     }
+
+    // convert item_counts into names
+    Object.keys(item_counts).forEach(function (id) {
+        item_counts[document.querySelector('.item[data-defindex="' + id + '"]').dataset.title] = item_counts[id];
+        delete item_counts[id];
+    });
 
     item_value.Scrap = Math.floor(item_value.Weapons / WEAPONS_TO_SCRAP);
     item_value["Scrap Raw"] = Math.floor(item_value.Weapons / WEAPONS_TO_SCRAP);
