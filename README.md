@@ -2,8 +2,6 @@
 
 ## [All Scripts][scraptfscripts-all-raw]
 
----
-
 ## [scrapTFSellWeaponsAuto][scraptfsellweaponsauto-raw]
 
 ### Description
