@@ -6,9 +6,9 @@
 
 Instead of using the "AutoScrap" option, I like to retain at least 2 of each weapon.
 
-Code should be pasted into the console on the following page: https://scrap.tf/sell/weapons
-
 ### Usage
+
+Code should be pasted into the console on the following page: https://scrap.tf/sell/weapons
 
 The function is called "scrapTFSellWeaponsAuto" and takes 4 arguments, these are:
 
@@ -43,5 +43,24 @@ Trade Contents
 | Weapons   | Total number of weapons being traded         |
 ```
 
+---
+
+## [scrapTFSellWeaponsSort][scraptfsellweaponssort-raw]
+
+### Descripion
+
+It's simple - it sorts the weapons, which makes it easier to see duplicates.
+
+### Usage
+
+Code should be pasted into the console on the following page: https://scrap.tf/sell/weapons
+
+The function is called "scrapTFSellWeaponsSort" and takes 0 arguments, just call it!
+
+### Output
+
+No output.
+
 [scrap-tf]: https://scrap.tf
 [scraptfsellweaponsauto-raw]: https://raw.githubusercontent.com/lukesrw/scrap-tf/master/js/scrapTFSellWeaponsAuto.js
+[scraptfsellweaponssort-raw]: https://raw.githubusercontent.com/lukesrw/scrap-tf/master/js/scrapTFSellWeaponsSort.js
