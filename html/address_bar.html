@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+
+        <link rel="stylesheet" href="https://scrap.tf/css/flat-ui-pro.min.css" />
+
+        <link rel="stylesheet" href="../style.css" />
+        <script src="../lib/send.js"></script>
+        <script src="../script.js"></script>
+    </head>
+    <body>
+        <img src="https://scrap.tf/img/logo-pride.svg" alt="Scrap.tf Logo" />
+
+        <button id="sort" class="btn btn-embossed btn-primary">Sort Weapons</button>
+
+        <hr />
+
+        <label for="number">Number of weapons to retain</label>
+        <input type="number" name="number" id="number" class="form-control" min="0" placeholder="2" value="2" />
+
+        <label for="filter">Filter by name</label>
+        <input type="text" name="filter" id="filter" class="form-control" placeholder="AzureDiamond" />
+
+        <label for="half">Allow half scrap</label>
+        <select name="half" id="half" class="form-control">
+            <option value="0" selected>No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <label for="auto">Auto trade</label>
+        <select name="auto" id="auto" class="form-control">
+            <option value="0" selected>No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <button id="trade" class="btn btn-embossed btn-primary">Sell Weapons</button>
+    </body>
+</html>
