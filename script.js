@@ -2,8 +2,6 @@
 
 window.addEventListener("DOMContentLoaded", () => {
     document.getElementById("sort").addEventListener("click", async () => {
-        console.log("here");
-
         await send({
             action: "sort"
         });
