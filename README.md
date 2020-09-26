@@ -1,3 +1,9 @@
+# [Scrap.tf][scrap-tf] Functions Extension
+
+In order to make these scripts more friendly to use, I've bundled them into a small Firefox Extension.
+
+This extension provides you with a user interface to call the functions, rather than using the console.
+
 # [Scrap.tf][scrap-tf] Scripts
 
 ## [All Scripts][scraptfscripts-all-raw]
