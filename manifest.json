@@ -30,8 +30,8 @@
             "96": "logo.svg"
         },
         "default_popup": "html/address_bar.html",
-        "default_title": "Address Bar",
+        "default_title": "Scrap.tf Functions",
         "show_matches": ["*://scrap.tf/sell/weapons"]
     },
-    "version": "1.0"
+    "version": "1.1"
 }
