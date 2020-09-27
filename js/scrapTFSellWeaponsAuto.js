@@ -29,6 +29,8 @@ function scrapTFSellWeaponsAuto(number_of_weapons_to_retain, filter_by_name, all
 
     console.clear(); // eslint-disable-line
 
+    number_of_weapons_to_retain = parseInt(number_of_weapons_to_retain, 10);
+
     document.getElementById("ClearSelectedReverse").click();
     Array.prototype.forEach.call(document.querySelectorAll("#user-bp-440 .item"), function (item) {
         if (!Object.prototype.hasOwnProperty.call(item_counts, item.dataset.defindex)) {

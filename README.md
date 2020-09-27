@@ -1,3 +1,9 @@
+# [Scrap.tf][scrap-tf] Functions Extension
+
+In order to make these scripts more friendly to use, I've bundled them into a [small Firefox Extension][firefox-extension].
+
+This extension provides you with a user interface to call the functions, rather than using the console.
+
 # [Scrap.tf][scrap-tf] Scripts
 
 ## [All Scripts][scraptfscripts-all-raw]
@@ -67,3 +73,4 @@ No output.
 [scraptfscripts-all-raw]: https://raw.githubusercontent.com/lukesrw/scrap-tf/master/js/scripts.js
 [scraptfsellweaponsauto-raw]: https://raw.githubusercontent.com/lukesrw/scrap-tf/master/js/scrapTFSellWeaponsAuto.js
 [scraptfsellweaponssort-raw]: https://raw.githubusercontent.com/lukesrw/scrap-tf/master/js/scrapTFSellWeaponsSort.js
+[firefox-extension]: https://addons.mozilla.org/en-US/firefox/addon/scrap-tf-functions/
